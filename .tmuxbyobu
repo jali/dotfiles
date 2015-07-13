@@ -8,20 +8,19 @@ byobu rename-window -t $SESSION:0 'JIVEworks'
 byobu split-window -v
 byobu split-window -h
 
-# select first pane and run commands
+# select 1st pane and run commands
 byobu select-pane -t 0
 byobu send-keys "vagrant destroy --force" C-m
 byobu send-keys "vagrant box remove hive/brand" C-m
-byobu send-keys "rm .vagrant/machines/default/virtualbox/synced_folders" C-m
 byobu send-keys "cd Projects/orange-brand" C-m
+byobu send-keys "rm .vagrant/machines/default/virtualbox/synced_folders" C-m
 byobu send-keys "git checkout development" C-m
 byobu send-keys "git pull --rebase" C-m
-byobu send-keys "vagrant destroy" C-m
 byobu send-keys "vagrant up" C-m
 byobu send-keys "vagrant ssh" C-m
 byobu send-keys "cd /vagrant/" C-m
 
-# second pane
+# 2nd pane
 byobu select-pane -t 1
 byobu send-keys "cd Projects/orange-brand-search-be" C-m
 byobu send-keys "git branch" C-m
@@ -32,9 +31,13 @@ byobu send-keys "vagrant destroy --force" C-m
 byobu send-keys "vagrant ssh" C-m
 byobu send-keys "cd /vagrant/" C-m
 
-# third pane
+# 3rd pane
 byobu select-pane -t 2
 byobu send-keys "selenium_up" C-m
 
-# switch back to first pane
+# create 4th pane
 byobu select-pane -t 0
+byobu split-window -h
+byobu select-pane -t 3
+
+
