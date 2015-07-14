@@ -10,9 +10,8 @@ byobu split-window -h
 
 # select 1st pane and run commands
 byobu select-pane -t 0
-byobu send-keys "vagrant destroy --force" C-m
-byobu send-keys "y" C-m
 byobu send-keys "vagrant box remove hive/brand" C-m
+wait 1
 byobu send-keys "y" C-m
 byobu send-keys "cd Projects/orange-brand" C-m
 byobu send-keys "rm .vagrant/machines/default/virtualbox/synced_folders" C-m
