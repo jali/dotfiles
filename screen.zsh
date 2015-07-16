@@ -19,7 +19,8 @@ byobu send-keys "git checkout development" C-m
 byobu send-keys "git pull --rebase" C-m
 byobu send-keys "vagrant up" C-m
 byobu send-keys "vagrant ssh" C-m
-byobu send-keys "cd /vagrant/" C-m
+byobu send-keys "cd /vagrant/tests/functional" C-m
+byobu send-keys "./bin/behat -p selenium" C-m
 
 # 2nd pane
 byobu select-pane -t 1
