@@ -46,6 +46,6 @@ byobu send-keys "start-selenium" C-m
 byobu select-pane -t 0
 byobu split-window -h
 byobu select-pane -t 3
-byobu send-kys "/etc/yourock" C-m
+byobu send-keys "yourock" C-m
 
 
