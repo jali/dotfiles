@@ -36,7 +36,7 @@ byobu send-keys "cd /vagrant/" C-m
 
 # 3rd pane
 byobu select-pane -t 2
-byobu send-keys "selenium_up" C-m
+byobu send-keys "start-selenium" C-m
 
 # create 4th pane
 byobu select-pane -t 0
