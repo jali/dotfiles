@@ -24,8 +24,6 @@ byobu send-keys "cd ~/Projects/orange-brand" C-m
 byobu send-keys "git checkout development" C-m
 byobu send-keys "git pull --rebase" C-m
 byobu send-keys "vagrant box remove hive/brand || true" C-m
-sleep 2
-#byobu send-keys "y" C-m
 byobu send-keys "vagrant destory --force || true" C-m
 byobu send-keys "rm .vagrant/machines/default/virtualbox/synced_folders || true" C-m
 byobu send-keys "vagrant up" C-m
@@ -51,7 +49,7 @@ byobu select-pane -t 0
 byobu send-keys "cd /vagrant/webroot" C-m
 byobu send-keys "time drush --debug ev '\$nids = db_query(\"select nid from node where status=1\")->fetchAllKeyed(); foreach(\$nid as \$nid => \$f){\$node = node_load(\$nid); orange_brand_rules_update_elastic_search(\$node);}'" C-m
 # end of drush function
-sleep 30
+sleep 120
 byobu send-keys "cd /vagrant/tests/functional" C-m
 byobu send-keys "pwd" C-m
 byobu send-keys "\./bin/behat -p selenium" C-m
