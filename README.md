@@ -1,2 +1,4 @@
-# automate-tmux-byobu
-Setup multiple pane and multiple window sessions in terminal using tmux and byobu
+# My dot files
+
+A collection of dot files and other configuration and installation stuff that I need on a fresh machine
+
