@@ -47,8 +47,6 @@ sleep 15
 byobu select-pane -t 0
 # start drush function to update elastic search
 byobu send-keys "cd /vagrant/webroot" C-m
-sleep 180
-byobu send-keys "time drush --debug ev '\$nids = db_query(\"select nid from node where status=1\")->fetchAllKeyed(); foreach(\$nid as \$nid => \$f){\$node = node_load(\$nid); orange_brand_rules_update_elastic_search(\$node);}'" C-m
 # clear drupal cache
 byobe send-keys "drush cc all"
 # fire up selenium behat tests
