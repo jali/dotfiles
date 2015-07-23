@@ -24,6 +24,7 @@ byobu send-keys "cd ~/Projects/orange-brand" C-m
 byobu send-keys "git checkout development" C-m
 byobu send-keys "git pull --rebase" C-m
 byobu send-keys "vagrant destory --force || true" C-m
+#byobu send-keys "y" C-m
 byobu send-keys "rm .vagrant/machines/default/virtualbox/synced_folders || true" C-m
 byobu send-keys "vagrant up --provision" C-m
 byobu send-keys "vagrant ssh" C-m
@@ -42,7 +43,7 @@ byobu send-keys "cd /vagrant/" C-m
 
 
 byobu select-pane -t 0
-# start drush function to update elastic search (removed)
+# start drush function to update elastic search
 byobu send-keys "cd /vagrant/webroot" C-m
 sleep 180
 # clear drupal cache
